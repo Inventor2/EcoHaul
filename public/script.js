@@ -45,3 +45,24 @@ buttons.forEach(button => {
         button.classList.remove('btn-glow');
     });
 });
+// Function to simulate fetching real-time data
+function updateData() {
+    // Dummy Temperature and Humidity Data
+    document.getElementById("temp-data").innerText = "25°C";
+    document.getElementById("humidity-data").innerText = "60%";
+
+    // Dummy Location Data
+    document.getElementById("location-data").innerText =
+        "Location: Bengaluru, India";
+
+    // Dummy AI Route Optimization Status
+    document.getElementById("route-data").innerText =
+        "Optimal route found with 12% less fuel consumption.";
+
+    // Dummy Maintenance Data
+    document.getElementById("maintenance-data").innerText =
+        "Next maintenance due in 5,000 km.";
+}
+
+// Simulate fetching new data every 5 seconds
+setInterval(updateData, 5000);
