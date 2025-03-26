@@ -62,4 +62,3 @@ form.onsubmit = async (ev) => {
   }
 };
 
-// You can delete this once you've filled out an API
