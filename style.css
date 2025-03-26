@@ -251,3 +251,6 @@ footer {
   color: #aaa;
   margin-top: 30px;
 }
+body {
+  background-color: lightgray;
+}
