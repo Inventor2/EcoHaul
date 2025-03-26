@@ -1,93 +1,224 @@
-/* Global Styles */
-body {
+/* General Styles */
+* {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0d1117;
-  color: #f0f0f0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-h1, h2, h3, h4, p {
-  margin: 0;
-  padding: 0.5rem 0;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #0e0e0e;
+  color: #fff;
+  line-height: 1.6;
 }
 
 /* Hero Section */
 #hero {
+  height: 100vh;
+  background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(135deg, #1f4037, #1b1b1b);
+  padding: 20px;
 }
 
-#sustainability {
-  color: #ffbf00;
+#hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffc107;
+  margin-bottom: 20px;
 }
 
-button {
-  background-color: #ffbf00;
+#hero .highlight {
+  color: #00e676;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #cfcfcf;
+}
+
+#hero button {
+  background: #ffc107;
+  color: #000;
+  padding: 12px 24px;
   border: none;
-  padding: 1rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
   border-radius: 8px;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.3s ease, background-color 0.3s;
 }
 
-button:hover {
-  background-color: #ffaa00;
+#hero button:hover {
+  background-color: #ffeb3b;
+  transform: scale(1.1);
 }
 
 /* Features Section */
 #features {
-  padding: 3rem 1rem;
+  padding: 50px 10%;
+  background-color: #1a1a1a;
+}
+
+#features h2 {
+  font-size: 2.8rem;
   text-align: center;
+  color: #00e676;
+  margin-bottom: 40px;
 }
 
 .feature {
-  background: #1b1b1b;
-  border: 1px solid #333;
-  padding: 1.5rem;
+  background: #242424;
   border-radius: 12px;
-  margin: 1rem 0;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 }
 
-.loading-animation {
-  animation: pulse 1.5s infinite;
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
 }
 
-@keyframes pulse {
-  0% { opacity: 0.6; }
-  50% { opacity: 1; }
-  100% { opacity: 0.6; }
+.feature h3 {
+  font-size: 1.8rem;
+  color: #ffc107;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  color: #cfcfcf;
+}
+
+/* Sensors */
+.sensor {
+  margin-top: 15px;
+}
+
+.sensor h4 {
+  font-size: 1.2rem;
+  color: #00e676;
+  margin-bottom: 5px;
 }
 
 /* About Us Section */
 #about {
-  padding: 3rem 1rem;
-  background-color: #121212;
+  background-color: #0f0f0f;
+  padding: 50px 10%;
   text-align: center;
+}
+
+#about h2 {
+  font-size: 2.8rem;
+  color: #00e676;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+/* Sustainability Section */
+#sustainability {
+  padding: 50px 10%;
+  background: linear-gradient(to right, #1a1a1a, #0f0f0f);
+  text-align: center;
+}
+
+#sustainability h2 {
+  font-size: 2.8rem;
+  color: #ffc107;
+  margin-bottom: 20px;
+}
+
+#sustainability p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+  margin-bottom: 30px;
+}
+
+/* Contact Section */
+#contact {
+  background-color: #0f0f0f;
+  padding: 50px 10%;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  color: #ffc107;
+  margin-bottom: 20px;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+#contact input,
+#contact textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1rem;
+}
+
+#contact button {
+  background: #00e676;
+  color: #000;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 10px;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+#contact button:hover {
+  background-color: #00c853;
+  transform: scale(1.1);
 }
 
 /* Footer */
 footer {
+  background: #0e0e0e;
+  color: #cfcfcf;
   text-align: center;
-  padding: 1rem 0;
-  background-color: #1b1b1b;
+  padding: 15px 0;
+  font-size: 0.9rem;
 }
 
-footer a {
-  color: #ffbf00;
-  text-decoration: none;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  #hero h1 {
+      font-size: 2.5rem;
+  }
 
-/* Theme Toggle Button */
-#theme-toggle {
-  position: fixed;
-  bottom: 1rem;
-  right: 1rem;
-  padding: 0.8rem;
-  background-color: #333;
-  color: #ffbf00;
-  border-radius: 50%;
-  cursor: pointer;
+  #features h2,
+  #about h2,
+  #sustainability h2,
+  #contact h2 {
+      font-size: 2rem;
+  }
+
+  .feature {
+      padding: 15px;
+  }
+
+  #contact form {
+      padding: 0 5%;
+  }
 }
