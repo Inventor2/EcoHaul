@@ -66,3 +66,24 @@ function updateData() {
 
 // Simulate fetching new data every 5 seconds
 setInterval(updateData, 5000);
+// Simulating real-time data updates
+function updateTemperature() {
+    const temp = (Math.random() * (35 - 20) + 20).toFixed(2);
+    document.getElementById('temperature').innerText = `${temp}°C`;
+}
+
+function updateHumidity() {
+    const humidity = (Math.random() * (90 - 40) + 40).toFixed(2);
+    document.getElementById('humidity').innerText = `${humidity}%`;
+}
+
+function updateLocation() {
+    const locations = ["Warehouse A", "En Route", "Destination B"];
+    const randomIndex = Math.floor(Math.random() * locations.length);
+    document.getElementById('location').innerText = `Location: ${locations[randomIndex]}`;
+}
+
+// Update data every 3 seconds
+setInterval(updateTemperature, 3000);
+setInterval(updateHumidity, 3000);
+setInterval(updateLocation, 5000);
