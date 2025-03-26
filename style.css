@@ -1,4 +1,4 @@
-/* General Styles */
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -30,10 +30,6 @@ body {
   font-weight: 700;
   color: #ffc107;
   margin-bottom: 20px;
-}
-
-#hero .highlight {
-  color: #00e676;
 }
 
 #hero p {
@@ -106,7 +102,7 @@ body {
   margin-bottom: 5px;
 }
 
-/* About Us Section */
+/* About Section */
 #about {
   background-color: #0f0f0f;
   padding: 50px 10%;

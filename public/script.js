@@ -1,28 +1,65 @@
-// Theme Toggle Logic
-const themeToggle = document.getElementById('theme-toggle');
+// EcoHaul Smart Monitoring Script
+document.addEventListener("DOMContentLoaded", function () {
+  console.log("EcoHaul Monitoring System Initialized 🚀");
 
-let isDarkMode = true;
-themeToggle.addEventListener('click', () => {
-  document.body.classList.toggle('light-mode');
-  isDarkMode = !isDarkMode;
-  themeToggle.innerText = isDarkMode ? 'Switch Theme' : 'Dark Mode';
-});
+  // Explore Features Button Click
+  document.querySelector("#explore-btn").addEventListener("click", function () {
+      scrollToSection("features");
+  });
 
-// Simulate IoT Data Fetch
-function updateSensors() {
-  const temperatureElement = document.getElementById('temperature');
-  const humidityElement = document.getElementById('humidity');
+  // Dynamic Sensor Updates
+  updateSensorData();
 
-  const temp = (20 + Math.random() * 10).toFixed(2);
-  const humidity = (30 + Math.random() * 20).toFixed(2);
+  // Periodically update sensor data every 5 seconds
+  setInterval(updateSensorData, 5000);
 
-  temperatureElement.innerText = `${temp}°C`;
-  humidityElement.innerText = `${humidity}%`;
-}
+  // Smooth Scroll to Section
+  function scrollToSection(sectionId) {
+      document.getElementById(sectionId).scrollIntoView({
+          behavior: "smooth",
+      });
+  }
 
-setInterval(updateSensors, 3000);
+  // Real-time Sensor Data Simulation
+  function updateSensorData() {
+      const tempElement = document.getElementById("temperature");
+      const humidityElement = document.getElementById("humidity");
 
-// Button to Explore Features
-document.getElementById('explore-btn').addEventListener('click', () => {
-  document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
+      // Generate random values for sensors
+      const tempValue = (20 + Math.random() * 10).toFixed(2);
+      const humidityValue = (50 + Math.random() * 20).toFixed(2);
+
+      // Update the values dynamically
+      tempElement.innerHTML = `${tempValue}°C`;
+      humidityElement.innerHTML = `${humidityValue}%`;
+
+      console.log(`Temperature: ${tempValue}°C, Humidity: ${humidityValue}%`);
+  }
+
+  // Contact Form Submission
+  const contactForm = document.getElementById("contact-form");
+  if (contactForm) {
+      contactForm.addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("Thank you! We will get back to you shortly.");
+          contactForm.reset();
+      });
+  }
+
+  // New AI Smart Route Feature (Dynamic Loading)
+  loadAISmartRoute();
+
+  function loadAISmartRoute() {
+      const routeFeature = document.getElementById("ai-smart-route");
+      if (routeFeature) {
+          setTimeout(() => {
+              routeFeature.innerHTML = `
+                  <h3>🚀 AI Smart Route Optimization</h3>
+                  <p>EcoHaul dynamically selects the fastest and most fuel-efficient route, reducing costs and improving delivery speed.</p>
+              `;
+              routeFeature.style.display = "block";
+              routeFeature.style.animation = "fadeIn 1.5s ease-in-out";
+          }, 3000);
+      }
+  }
 });
