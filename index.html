@@ -1,42 +1,73 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Baking with the Gemini API</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoHaul - Sustainable Logistics</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <main>
-    <h1>Baking with the Gemini API</h1>
-    <form>
-      <div class="image-picker">
-        <label class="image-choice">
-          <input type="radio" checked name="chosen-image" value="/baked_goods_1.jpg">
-          <img src="/baked_goods_1.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_2.jpg">
-          <img src="/baked_goods_2.jpg">
-        </label>
-        <label class="image-choice">
-          <input type="radio" name="chosen-image" value="/baked_goods_3.jpg">
-          <img src="/baked_goods_3.jpg">
-        </label>
-      </div>
-      <div class="prompt-box">
-        <label>
-          <input name="prompt" placeholder="Enter instructions here" type="text"
-            value="Provide an example recipe for the baked goods in the image">
-        </label>
-        <button type="submit">Go</button>
-      </div>
-    </form>
-    <p class="output">(Results will appear here)</p>
-  </main>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">EcoHaul</h1>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-  <script type="module" src="/main.js"></script>
+    <header class="hero">
+        <div class="hero-content">
+            <h2>Transforming Logistics with Sustainability</h2>
+            <p>AI-Powered Smart Routes. Real-time Monitoring. Advanced Features.</p>
+            <a href="#features" class="btn">Explore Features</a>
+        </div>
+    </header>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>EcoHaul is redefining sustainable logistics by integrating cutting-edge AI and IoT solutions. Our goal is to optimize logistics operations while maintaining environmental responsibility.</p>
+        </div>
+    </section>
+
+    <section id="features" class="section dark-section">
+        <div class="container">
+            <h2>Our Features</h2>
+            <div class="feature-grid">
+                <div class="feature">
+                    <h3>AI Smart Route</h3>
+                    <p>Efficiently optimize delivery routes with AI-powered algorithms.</p>
+                </div>
+                <div class="feature">
+                    <h3>Real-time Monitoring</h3>
+                    <p>Track temperature, humidity, and vehicle status in real-time.</p>
+                </div>
+                <div class="feature">
+                    <h3>Maintenance Alerts</h3>
+                    <p>Get predictive alerts to prevent breakdowns and ensure smooth operation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Need assistance or want to know more? Reach out to us anytime.</p>
+            <a href="mailto:support@ecohaul.com" class="btn">Email Us</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 EcoHaul. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+
 </body>
 
 </html>
