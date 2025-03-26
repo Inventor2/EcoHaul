@@ -1,89 +1,28 @@
-// Smooth Scroll Effect
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
+// Theme Toggle Logic
+const themeToggle = document.getElementById('theme-toggle');
+
+let isDarkMode = true;
+themeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('light-mode');
+  isDarkMode = !isDarkMode;
+  themeToggle.innerText = isDarkMode ? 'Switch Theme' : 'Dark Mode';
 });
 
-// Fade-in Effect on Scroll
-const sections = document.querySelectorAll(".section");
-const options = {
-    threshold: 0.2,
-    rootMargin: "0px 0px -100px 0px"
-};
+// Simulate IoT Data Fetch
+function updateSensors() {
+  const temperatureElement = document.getElementById('temperature');
+  const humidityElement = document.getElementById('humidity');
 
-const sectionObserver = new IntersectionObserver(function(entries, sectionObserver) {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) {
-            return;
-        }
-        entry.target.classList.add("fade-in");
-        sectionObserver.unobserve(entry.target);
-    });
-}, options);
+  const temp = (20 + Math.random() * 10).toFixed(2);
+  const humidity = (30 + Math.random() * 20).toFixed(2);
 
-sections.forEach(section => {
-    sectionObserver.observe(section);
+  temperatureElement.innerText = `${temp}°C`;
+  humidityElement.innerText = `${humidity}%`;
+}
+
+setInterval(updateSensors, 3000);
+
+// Button to Explore Features
+document.getElementById('explore-btn').addEventListener('click', () => {
+  document.getElementById('features').scrollIntoView({ behavior: 'smooth' });
 });
-
-// Sticky Navbar Effect
-window.addEventListener('scroll', function() {
-    const nav = document.querySelector('nav');
-    nav.classList.toggle('sticky', window.scrollY > 50);
-});
-
-// Button Hover Glow Effect
-const buttons = document.querySelectorAll('button');
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', () => {
-        button.classList.add('btn-glow');
-    });
-    button.addEventListener('mouseleave', () => {
-        button.classList.remove('btn-glow');
-    });
-});
-// Function to simulate fetching real-time data
-function updateData() {
-    // Dummy Temperature and Humidity Data
-    document.getElementById("temp-data").innerText = "25°C";
-    document.getElementById("humidity-data").innerText = "60%";
-
-    // Dummy Location Data
-    document.getElementById("location-data").innerText =
-        "Location: Bengaluru, India";
-
-    // Dummy AI Route Optimization Status
-    document.getElementById("route-data").innerText =
-        "Optimal route found with 12% less fuel consumption.";
-
-    // Dummy Maintenance Data
-    document.getElementById("maintenance-data").innerText =
-        "Next maintenance due in 5,000 km.";
-}
-
-// Simulate fetching new data every 5 seconds
-setInterval(updateData, 5000);
-// Simulating real-time data updates
-function updateTemperature() {
-    const temp = (Math.random() * (35 - 20) + 20).toFixed(2);
-    document.getElementById('temperature').innerText = `${temp}°C`;
-}
-
-function updateHumidity() {
-    const humidity = (Math.random() * (90 - 40) + 40).toFixed(2);
-    document.getElementById('humidity').innerText = `${humidity}%`;
-}
-
-function updateLocation() {
-    const locations = ["Warehouse A", "En Route", "Destination B"];
-    const randomIndex = Math.floor(Math.random() * locations.length);
-    document.getElementById('location').innerText = `Location: ${locations[randomIndex]}`;
-}
-
-// Update data every 3 seconds
-setInterval(updateTemperature, 3000);
-setInterval(updateHumidity, 3000);
-setInterval(updateLocation, 5000);

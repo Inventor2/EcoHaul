@@ -1,54 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EcoHaul - Sustainable Logistics</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoHaul - Sustainable Logistics</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section id="hero" class="section">
-        <h1>Transforming Logistics with <span class="highlight">Sustainability</span></h1>
-        <p>AI-Powered Smart Routes. Real-time Monitoring. Advanced Features.</p>
-        <button onclick="location.href='#features'">Explore Features</button>
-    </section>
+  <!-- Hero Section -->
+  <section id="hero">
+    <h1>Transforming Logistics with <span id="sustainability">Sustainability</span></h1>
+    <p>AI-Powered Smart Routes. Real-time Monitoring. Advanced Features.</p>
+    <button id="explore-btn">Explore Features</button>
+  </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section">
-        <h2>Explore Our Smart Features</h2>
-        
-        <div class="feature">
-            <h3>📡 Real-time Monitoring</h3>
-            <p>Track environmental conditions and vehicle health.</p>
-            <div class="sensor">
-                <h4>🌡️ <strong>Temperature Monitoring</strong></h4>
-                <p id="temperature">Loading...</p>
-            </div>
-            <div class="sensor">
-                <h4>💧 <strong>Humidity Monitoring</strong></h4>
-                <p id="humidity">Loading...</p>
-            </div>
-        </div>
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Explore Our Smart Features</h2>
+    <div class="feature">
+      <h3>🛠️ Real-time Monitoring</h3>
+      <p>Track environmental conditions and vehicle health.</p>
+      <div class="sensor">
+        <h4>🔬 Temperature Monitoring</h4>
+        <p id="temperature" class="loading-animation">28.10°C</p>
+      </div>
+      <div class="sensor">
+        <h4>💧 Humidity Monitoring</h4>
+        <p id="humidity" class="loading-animation">41.62%</p>
+      </div>
+    </div>
+    <div class="feature">
+      <h3>🤖 AI Smart Route Optimization</h3>
+      <p>Find the most efficient and sustainable routes in real-time.</p>
+    </div>
+    <div class="feature">
+      <h3>🔍 Predictive Maintenance</h3>
+      <p>Prevent breakdowns with predictive analytics and IoT.</p>
+    </div>
+  </section>
 
-        <div class="feature">
-            <h3>📍 Real-time Location Tracking</h3>
-            <p>Monitor vehicle location for seamless tracking.</p>
-            <p id="location">Waiting for updates...</p>
-        </div>
+  <!-- About Us Section -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      At <strong>EcoHaul</strong>, we aim to revolutionize logistics with smart, sustainable
+      solutions. Our system integrates AI and IoT to ensure optimized performance while reducing
+      environmental impact.
+    </p>
+    <p>Join us on this journey toward greener and more efficient logistics.</p>
+  </section>
 
-        <div class="feature">
-            <h3>🛠️ Predictive Maintenance</h3>
-            <p>Get alerts before system failures to reduce downtime.</p>
-        </div>
-    </section>
+  <!-- Footer -->
+  <footer>
+    <p>Contact Us: <a href="mailto:support@ecohaul.com">support@ecohaul.com</a></p>
+    <p>Follow us: 
+      <a href="#">LinkedIn</a> | 
+      <a href="#">Twitter</a> | 
+      <a href="#">Instagram</a>
+    </p>
+    <p>&copy; 2025 EcoHaul. All Rights Reserved.</p>
+  </footer>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 EcoHaul. All rights reserved.</p>
-    </footer>
+  <button id="theme-toggle">Switch Theme</button>
 
-    <script src="public/script.js" defer></script>
+  <script src="script.js"></script>
 </body>
 </html>
